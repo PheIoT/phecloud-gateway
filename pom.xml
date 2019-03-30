@@ -23,7 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
-		<docker.image.prefix>btcs</docker.image.prefix>
+		<docker.image.prefix>pheiot</docker.image.prefix>
 		<docker-plugin-version>0.4.13</docker-plugin-version>
 		<!--<private.docker.host>192.168.251.32</private.docker.host>-->
 	</properties>
