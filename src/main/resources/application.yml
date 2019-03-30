@@ -9,24 +9,30 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: admin
-        uri: lb://ADMIN-MANAGER
-        predicates:
-        - Path=/api/v1/admin/**
-        filters:
-        - StripPrefix=0  #去掉过滤Path路径
-      - id: pd_device
-        uri: lb://PD-MANAGER
-        predicates:
-        - Path=/api/v1/device/**
-        filters:
-        - StripPrefix=1  #去掉过滤Path路径
-      - id: pd_product
-        uri: lb://PD-MANAGER
-        predicates:
-        - Path=/api/v1/product/**
-        filters:
-        - StripPrefix=0  #去掉过滤Path路径
+        - id: admin
+          uri: lb://ADMIN-MANAGER
+          predicates:
+            - Path=/api/v1/admin/**
+          filters:
+            - StripPrefix=0  #1-去掉过滤Path路径，0保留
+        - id: pd_device
+          uri: lb://PD-MANAGER
+          predicates:
+            - Path=/api/v1/device/**
+          filters:
+            - StripPrefix=0  #1-去掉过滤Path路径，0保留
+        - id: pd_product
+          uri: lb://PD-MANAGER
+          predicates:
+            - Path=/api/v1/product/**
+          filters:
+            - StripPrefix=0  #1-去掉过滤Path路径，0保留
+        - id: pd_property
+          uri: lb://PD-MANAGER
+          predicates:
+            - Path=/api/v1/property/**
+          filters:
+            - StripPrefix=0  #1-去掉过滤Path路径，0保留
       discovery:
         locator:
           enabled: true
