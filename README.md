@@ -10,15 +10,14 @@
 
 ### 代理目录
 
-ADMIN-MANAGER 
-  predicates: 
-   -Path: /api/${version}/admin/**
+ADMIN-MANAGER<br>
+  predicates: <br>
+    -Path: /api/${version}/admin/**
 
-PD-MANAGER
-  predicates:
-    -Path: /api/${version}/product/**
-
-​    -Path: /api/${version}/device/**
+PD-MANAGER<br>
+  predicates:<br>
+    -Path: /api/${version}/product/** <br>
+    -Path: /api/${version}/device/** 
 
 
 
